@@ -3,48 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-      <div id="gridcontainer">
-      <header id="head">
-    <div id="banner">
-       <ul class="tabs">
-            <li><a href="#">Icon</a></li>
-            <li><a href="malikah.html">Malikah!</a></li>
-        </ul>
-       <ul class="tabs">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Journey</a></li>
-            <li><a href="#">Achievements</a></li>
-            <li><a href="#">Playground</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-        <ul class="tabs">
-            <li><a href="#">Contact</a></li>
-        </ul>
-    
-    </div>
-</header>
-        <main id="main">
-            <section class="hi-block">Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Possimus, eos autem velit perspiciatis temporibus
-                 consequuntur iure obcaecati debitis quis ex quos reiciendis cum amet sit 
-                 ratione in harum magnam quo.</section>
-            <section class="inf-block">3</section>
-            <section class="hi-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                 Doloribus recusandae illum adipisci quam, reprehenderit pariatur doloremque 
-                 quod aliquam quis voluptas ducimus dolorum harum. Nisi, tenetur vero soluta
-                  ipsum aperiam similique.</section>
-            <section class="me-block">4</section>
-            <section class="hob-block">5</section>
-            <section class="hob-block">6</section>
-             <section class="me-block">7</section>
-        </main>
+  <header class="navbar">
+    <a href="malikah.html" class="logo">Khanya M.</a>
+    <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+
+            <a href="https://github.com/Malikahkm" target="_blank"aria-label="GitHub">
+                <span>GH</span>
+            </a>
+
+            <a href="https://linkedin.com/in/khanya-mhlongo-a250503a8" target="_blank" aria-label="LinkedIn">
+                <span>in</span>
+            </a>
+
+            <button id="themeToggle" aria-label="Toggle dark mode"> ☼
+            </button>
+        </div>
+        <button class="menu-button" id="menuButton">☰</button>
+    </header>
+
+    <main>
+    <section class="about-hero">
+            <section class="hero-text">
+                <p class="eyebrow">
+                    ✦ ABOUT ME
+                </p>
+
+                <h1> Hi, I'm
+                    <span>Khanya</span>
+                </h1>
+                <h2>
+                    Computer Science Student
+                    <br>
+                    & Aspiring Developer
+                </h2>
+                <p class="hero-description">
+                    I build things for the web, solve problems with code,
+                    and constantly strive to grow. I'm passionate about
+                    creating meaningful digital experiences that make an impact.
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="primary-button">
+                        Let's Connect
+                        <span>→</span>
+                    </a>
+                    <a href="#" class="cv-button">
+                        Download CV
+                        <span>↓</span>
+                    </a>
+                </div>
+            </section>
+            <section class="hero-image-container">
+
+                <div class="image-decoration"></div>
+                <img
+                    src="images/about-me.jpg"
+                    alt="Photo of Khanya"
+                    class="hero-image">
+            </section>
+        </section>
+        <section class="journey-section">
+            <div class="journey-introduction">
+                <span class="section-number">
+                    01
+                </span>
+                <p class="eyebrow light">
+                    MY JOURNEY
+                </p>
+                <h2>
+                    The path that
+                    <br>
+                    brought me here
+                </h2>
+                <div class="small-line"></div>
+                <p>
+                    My journey into Computer Science started with CAT in high school,
+                     where I discovered my love for HTML and creating things with code.
+                     That curiosity led me to explore the world of technology and eventually 
+                     choose Computer Science.
+                </p>
+                <p>
+                    Now I'm pursuing a degree in Computer Science and
+                    continuously learning, building, and challenging
+                    myself to grow every day.Since then, I’ve discovered 
+                    a passion for Java, SQL, backend development and solving 
+                    problems through code.
+                </p>
+                <div class="signature">
+                    Khanya M.
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        🎓
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">
+                            2025 — Present
+                        </span>
+                        <h3>
+                            Computer Science Student
+                        </h3>
+                        <p>
+                            Currently pursuing my Computer Science degree,
+                            learning software development, databases,
+                            algorithms and systems.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        &lt;/&gt;
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">
+                            2022 - 2024
+                        </span>
+                        <h3>
+                            Started Building
+                        </h3>
+                        <p>
+                            CAT introduced me to HTML, and I loved turning code into something I 
+                             could see and create.I began building small projects and exploring
+                            web development while improving my
+                            problem-solving skills.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+
+                    <div class="timeline-icon">
+                        ♡
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-year">
+                            2022
+                        </span>
+
+                        <h3>
+                            Discovered My Passion
+                        </h3>
+
+                        <p>
+                            Fell in love with technology and decided to
+                            pursue a career where I can create, innovate
+                            and make an impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <div class="section-heading">
+                <div>
+                 <span class="section-number">
+                        02
+                    </span>
+                    <p class="eyebrow">
+                        SKILLS & WHAT I DO
+                    </p>
+                    <h2>
+                        Technologies I work with
+                        <br>
+                        & things I enjoy building
+                    </h2>
+                </div>
+
+                <a href="projects.html" class="outline-button">
+                    View My Projects →
+                </a>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-icon">
+                        &lt;/&gt;
+                    </div>
+                    <h3>
+                        Web Development
+                    </h3>
+                    <p>
+                        HTML, CSS, JavaScript,
+                        responsive design,
+                        UI/UX basics.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">
+                        C#
+                    </div>
+                    <h3>
+                        Programming
+                    </h3>
+                    <p>
+                        C# basics,
+                        problem solving,
+                        data structures.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">
+                        DB
+                    </div>
+                    <h3>
+                    Database
+                    </h3>
+                    <p>
+                        SQL, T-SQL, database
+                        design, normalization
+                        and Access.
+                    </p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">
+                     ⚒
+                    </div>
+                    <h3>
+                        Tools
+                    </h3>
+                    <p>
+                        Git & GitHub, VS Code,VS,
+                        Microsoft Office, SQL Server,
+                    </p>
+
+                </article>
+                <article class="skill-card">
+                    <div class="skill-icon">
+                        ✦
+                    </div>
+                    <h3>
+                        Currently Exploring
+                    </h3>
+                    <p>
+                        Node.js,
+                        APIs, cloud and
+                        system design.
+                    </p>
+
+                </article>
+            </div>
+        </section>
+        <section class="split-section">
+
+            <div class="goals-card">
+                <img
+                    src="images/workspace.jpg"
+                    alt="Laptop workspace"
+                    class="goals-image">
+                <div class="goals-overlay">
+                <span class="section-number">
+                        03
+                    </span>
+                    <p class="eyebrow light">
+                        GOALS
+                    </p>
+                    <h2>
+                        Where I'm headed
+                    </h2>
+                    <ul>
+                        <li>
+                            <span>✓</span>
+                            Become a skilled software developer
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Build products that solve real problems
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Work in a collaborative and innovative team
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Keep learning and level up every day
+                        </li>
+                        <li>
+                            <span>✓</span>
+                            Create financial & location freedom
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="beyond-card">
+                <span class="section-number">
+                    04
+                </span>
+                <p class="eyebrow">
+                    BEYOND THE CODE
+                </p>
+                <h2>
+                    More about me
+                </h2>
+                <div class="interests-grid">
+                    <div class="interest">
+                        <div class="interest-icon">
+                            ✈
+                        </div>
+                        <h3>
+                            Travel
+                        </h3>
+                        <p>
+                            I love exploring traveling to explore new places
+                            and experiencing different
+                            cultures. I organise my own and family trips, and enjoy the planning process.
+                        </p>
+                    </div>
+                    <div class="interest">
+                        <div class="interest-icon">
+                            ♡
+                        </div>
+                        <h3>
+                            Faith
+                        </h3>
+                        <p>
+                            Strong Christain background.My faith keeps me grounded
+                            and motivated.
+                        </p>
+                    </div>
+                   <div class="interest">
+                        <div class="interest-icon">
+                            ♧
+                        </div>
+                        <h3>
+                            Fitness
+                        </h3>
+                        <p>
+                            Fitness is part of my
+                            discipline and lifestyle.
+                        </p>
+                    </div>
+                    <div class="interest">
+                        <div class="interest-icon">
+                            ✈
+                        </div>
+                        <h3>
+                            Adventure
+                        </h3>
+                        <p>
+                            I enjoy trying new things
+                            and stepping outside my
+                            comfort zone.
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-note">
+                    <span>♡</span>
+                    <p>
+                        I believe in growth, consistency
+                        and making the most of every
+                        opportunity.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="cta-icon">
+                ✉
+            </div>
+            <div>
+                <h2>
+                    Let's build something
+                    amazing together
+                </h2>
+                <p>
+                    I'm always open to new opportunities
+                    and collaborations.
+                </p>
+            </div>
+            <a href="contact.html" class="primary-button">
+                Get In Touch
+                <span>→</span>
+            </a>
+        </section>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+   <!---- <footer>
+
+        <p>
+            © 2026 Khanya M. All rights reserved.
+        </p>
+
+        <div>
+
+            <a href="#">
+                GitHub
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>-->
         <footer id="footer">foot</footer>
       </div>
 </body>

@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+      <title>Me</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body >
-    <div id="gridcontainer">
-    <header id="head">  <div id="banner">
-       <ul class="tabs">
-            <li><a href="#">Icon</a></li>
-            <li><a href="malikah.html">Malikah!</a></li>
-        </ul>
-       <ul class="tabs">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Journey</a></li>
-            <li><a href="#">Achievements</a></li>
-            <li><a href="#">Playground</a></li>
-            <li><a href="#">Blog</a></li>
-        </ul>
-        <ul class="tabs">
-            <li><a href="#">Contact</a></li>
-        </ul>
-    
-    </div></header>
+
+<body>
+  <header class="navbar">
+    <a href="malikah.html" class="logo">Khanya M.</a>
+    <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-icons">
+
+            <a href="#" aria-label="GitHub">
+                <span>GH</span>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <span>in</span>
+            </a>
+
+            <button id="themeToggle" aria-label="Toggle dark mode">
+                ☼
+            </button>
+
+        </div>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+    </header>
     <main id="main" class="page">
         <p class="col1 Photo tilt2"><img src=images/12.jpeg></p>
          <p class="col1 Photo  tilt2"> <img src=images/13.jpeg></p>
