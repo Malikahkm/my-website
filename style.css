@@ -17,7 +17,7 @@
 #main{
     grid-area: main;
    width:100%;
-   background: linear-gradient(to bottom,#d8ad8c, 75%, rgb(252, 219, 134));
+   background: linear-gradient(to bottom,#D4C5A9,75%, #E6D8B8);
     height: auto;
 
 }
