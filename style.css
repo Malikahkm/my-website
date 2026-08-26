@@ -17,7 +17,7 @@
 #main{
     grid-area: main;
    width:100%;
-   background: linear-gradient(to bottom,goldenrod 75%, rgb(252, 219, 134));
+   background: linear-gradient(to bottom,#d8ad8c, 75%, rgb(252, 219, 134));
     height: auto;
 
 }
@@ -51,8 +51,8 @@ table{
     width:75%;
     margin: auto;
 }
-  td {
-  text-align: center;
+td {
+  align-items: center;
 }
 table img{
     height: 30px;
@@ -102,7 +102,7 @@ p video{
     transform:rotateZ(350deg);;
 }
 .Photo{
-    background-color: whitesmoke; 
+    background-color: #222c35; 
     width: 240px;
     height: 330px;
   background-image: radial-gradient(black 0.5px, transparent 0);
@@ -299,24 +299,21 @@ h1 {
 
 
 .box {
-    background-image: url('images/Me-Pic.png');
+    background-image: url('images/home2.jpeg');
     background-repeat: no-repeat;
-    height: 690px;
+    background-size: cover;
+    background-position: center;
+    height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
     align-items: center;
     cursor: pointer;
-    background-size: 500px;
-    background-position: right 0px top -150px;
-    filter: drop-shadow(0px 10px 60px rgba(0, 0, 0, 0.5));
+   justify-content: center;
     transition: background-size 0.2s ease-out, 
                 background-position 0.3s ease-out, 
                 filter 0.2s ease-out;
 }
 .box:hover {
-    background-size: 520px;
-    background-position: right -5px top -160px; 
     filter: drop-shadow(5px 30px 80px rgba(0, 0, 0, 0.6));
 }
 #typing {
@@ -337,15 +334,16 @@ h1 {
     width: 550px;
 }
 .hero-text h1 {
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-top: 2px;
 }
 
 .hero-text h2 {
     font-size: 40px;
     line-height: 1.1;
-    margin: 0 0 20px 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
     min-height: 1.2em;
 }
 .hero-text p {
