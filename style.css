@@ -1589,9 +1589,7 @@ body.dark .contact-cta {
     text-decoration: underline;
 }
 
-/* =========================================
-   CONTACT RESPONSIVE
-   ========================================= */
+/* CONTACT RESPONSIVE*/
 
 @media (max-width: 900px) {
 
