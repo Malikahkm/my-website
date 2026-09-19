@@ -1029,40 +1029,6 @@ footer a:hover {
     color: var(--accent);
 }
 
-/* DARK MODE*/
-
-body.dark {
-    --background: #11161b;
-    --white: #1a2025;
-    --text: #f4f4f4;
-    --muted: #b5b5b5;
-    --border: #30363b;
-}
-
-body.dark .navbar {
-    background: rgba(17, 22, 27, 0.95);
-}
-body.dark #main {
-    background: linear-gradient(to bottom, #11161b, #1a2025);
-}
-
-body.dark #footer {
-    background-color: #1a2025;
-}
-
-body.dark .Photo {
-    background-color: #0b0f12;
-}
-
-body.dark .griditem {
-    background-color: #11161b;
-}
-
-body.dark .skill-card,
-body.dark .beyond-card,
-body.dark .contact-cta {
-    background: #1a2025;
-}
 
 /* TABLET / SMALL SCREEN */
 
@@ -1663,4 +1629,78 @@ body.dark .contact-cta {
         flex-direction: column;
         text-align: center;
     }
+}
+/*DARK MODE*/
+body.dark {
+    --background: #11161b;
+    --white: #1a2025;
+    --text: #f4f4f4;
+    --muted: #b5b5b5;
+    --border: #30363b;
+}
+/* Main website background */
+
+body.dark #main {
+    background: linear-gradient(
+        to bottom,
+        #11161b,
+        #1a2025
+    );
+}
+/* Navigation */
+body.dark .navbar {
+    background: rgba(17, 22, 27, 0.95);
+    border-bottom-color: #30363b;
+}
+
+body.dark .nav-links a {
+    color: #f4f4f4;
+}
+
+body.dark .nav-icons a {
+    color: #f4f4f4;
+}
+
+body.dark .menu-button {
+    color: #f4f4f4;
+}
+
+/* Footer */
+body.dark #footer {
+    background-color: #1a2025;
+    color: #f4f4f4;
+    border-top-color: #30363b;
+}
+/* Malikah collage */
+body.dark .Photo {
+    background-color: #0b0f12;
+}
+
+body.dark .griditem {
+    background-color: #11161b;
+}
+/* Tables / icons */
+
+body.dark table {
+    color: #f4f4f4;
+}
+/* About page */
+body.dark .skill-card,
+body.dark .beyond-card,
+body.dark .contact-cta {
+    background: #1a2025;
+    border-color: #30363b;
+}
+/* Contact page */
+body.dark .contact-item {
+    background: #1a2025;
+    border-color: #30363b;
+}
+/* General text */
+body.dark {
+    color: var(--text);
+}
+
+body.dark p {
+    color: inherit;
 }
