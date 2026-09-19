@@ -1042,6 +1042,21 @@ body.dark {
 body.dark .navbar {
     background: rgba(17, 22, 27, 0.95);
 }
+body.dark #main {
+    background: linear-gradient(to bottom, #11161b, #1a2025);
+}
+
+body.dark #footer {
+    background-color: #1a2025;
+}
+
+body.dark .Photo {
+    background-color: #0b0f12;
+}
+
+body.dark .griditem {
+    background-color: #11161b;
+}
 
 body.dark .skill-card,
 body.dark .beyond-card,
