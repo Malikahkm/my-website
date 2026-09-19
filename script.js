@@ -50,8 +50,6 @@ if (menuButton && navLinks) {
     });
 
 
-    /* Close mobile menu after clicking a link */
-
     const links = document.querySelectorAll(".nav-links a");
 
     links.forEach(link => {
@@ -65,7 +63,8 @@ if (menuButton && navLinks) {
     });
 }
 
- /* =====================================================
+
+/* =====================================================
    DARK MODE
 ===================================================== */
 
@@ -73,19 +72,21 @@ const themeToggle = document.getElementById("themeToggle");
 
 if (themeToggle) {
 
-    // Load saved theme
+    /* Check saved theme */
+
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme === "dark") {
+
         document.body.classList.add("dark");
         themeToggle.textContent = "☀";
-    } else {
-        document.body.classList.remove("dark");
-        themeToggle.textContent = "☼";
+
     }
 
-    // Toggle theme
-    themeToggle.addEventListener("click", function () {
+
+    /* Toggle dark mode */
+
+    themeToggle.addEventListener("click", () => {
 
         document.body.classList.toggle("dark");
 
@@ -103,18 +104,4 @@ if (themeToggle) {
 
     });
 }
-
-    /* Remember user's theme */
-
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "dark") {
-
-        document.body.classList.add("dark");
-
-        themeToggle.textContent = "☀";
-
-    }
-}
-
 
