@@ -1,27 +1,39 @@
+/* =====================================================
+   HOME PAGE - TYPING EFFECT
+===================================================== */
+
 const text = "Welcome to my World!";
 const typing = document.getElementById("typing");
 
-let i = 0;
+if (typing) {
 
-function type() {
-    if (i < text.length) {
-        typing.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 100);
-    } else {
-        setTimeout(() => {
-            typing.textContent = "";
-            i = 0;
-            type();
-        }, 1500);
+    let i = 0;
+
+    function type() {
+
+        if (i < text.length) {
+
+            typing.textContent += text.charAt(i);
+            i++;
+
+            setTimeout(type, 100);
+
+        } else {
+
+            setTimeout(() => {
+
+                typing.textContent = "";
+                i = 0;
+                type();
+
+            }, 1500);
+        }
     }
+
+    type();
 }
-type();
 
-const p=document.createElement('p');
-p.className='box';
 
-//about page 
 /* =====================================================
    MOBILE MENU
 ===================================================== */
@@ -29,26 +41,29 @@ p.className='box';
 const menuButton = document.getElementById("menuButton");
 const navLinks = document.getElementById("navLinks");
 
-menuButton.addEventListener("click", () => {
+if (menuButton && navLinks) {
 
-    navLinks.classList.toggle("show");
+    menuButton.addEventListener("click", () => {
 
-});
-
-
-/* Close mobile menu after clicking a link */
-
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("show");
+        navLinks.classList.toggle("show");
 
     });
 
-});
+
+    /* Close mobile menu after clicking a link */
+
+    const links = document.querySelectorAll(".nav-links a");
+
+    links.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("show");
+
+        });
+
+    });
+}
 
 
 /* =====================================================
@@ -57,37 +72,40 @@ links.forEach(link => {
 
 const themeToggle = document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click", () => {
+if (themeToggle) {
 
-    document.body.classList.toggle("dark");
+    themeToggle.addEventListener("click", () => {
 
-    if (document.body.classList.contains("dark")) {
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            themeToggle.textContent = "☀";
+
+            localStorage.setItem("theme", "dark");
+
+        } else {
+
+            themeToggle.textContent = "☼";
+
+            localStorage.setItem("theme", "light");
+
+        }
+
+    });
+
+
+    /* Remember user's theme */
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark");
 
         themeToggle.textContent = "☀";
 
-        localStorage.setItem("theme", "dark");
-
-    } else {
-
-        themeToggle.textContent = "☼";
-
-        localStorage.setItem("theme", "light");
-
     }
-
-});
-
-
-/* Remember user's theme */
-
-const savedTheme = localStorage.getItem("theme");
-
-if (savedTheme === "dark") {
-
-    document.body.classList.add("dark");
-
-    themeToggle.textContent = "☀";
-
 }
 
 
