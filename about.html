@@ -3,91 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>About Me</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <title>About | Khanya M.</title>
+
+    <!-- applies the saved theme before the page paints (no defer) -->
+    <script src="theme-init.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header class="navbar">
-    <a href="malikah.html" class="logo">Khanya M.</a>
-    <nav class="nav-links" id="navLinks">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="navbar">
+        <a href="malikah.html" class="logo">Khanya M.</a>
+
+        <nav class="nav-links" id="navLinks" aria-label="Main">
             <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
+            <a href="about.html" aria-current="page">About</a>
             <a href="projects.html">Projects</a>
             <a href="skills.html">Skills</a>
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
 
-        <div class="nav-icons">
+        <div class="nav-actions">
+            <a class="icon-btn social" href="https://github.com/Malikahkm" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><span>GH</span></a>
+            <a class="icon-btn social" href="https://linkedin.com/in/khanya-mhlongo-a250503a8" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><span>in</span></a>
 
-            <a href="https://github.com/Malikahkm" target="_blank"aria-label="GitHub">
-                <span>GH</span>
-            </a>
+            <button type="button" class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
 
-            <a href="https://linkedin.com/in/khanya-mhlongo-a250503a8" target="_blank" aria-label="LinkedIn">
-                <span>in</span>
-            </a>
-
-            <button id="themeToggle" aria-label="Toggle dark mode"> ☼
+            <button type="button" class="icon-btn menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
         </div>
-        <button class="menu-button" id="menuButton">☰</button>
-
     </header>
 
-    <main>
-    <section class="about-hero">
-            <section class="hero-text">
-                <p class="eyebrow">
-                    ✦ ABOUT ME
-                </p>
+    <main id="main">
 
-                <h1> Hi, I'm
-                    <span>Khanya</span>
-                </h1>
+        <!-- HERO -->
+        <section class="about-hero">
+            <div class="about-hero-text">
+                <p class="eyebrow">✦ ABOUT ME</p>
+
+                <h1>Hi, I'm <span>Khanya</span></h1>
+
                 <h2>
                     Computer Science Student
                     <br>
-                    & Aspiring Developer
+                    &amp; Aspiring Developer
                 </h2>
+
                 <p class="hero-description">
                     I build things for the web, solve problems with code,
                     and constantly strive to grow. I'm passionate about
                     creating meaningful digital experiences that make an impact.
                 </p>
+
                 <div class="hero-buttons">
                     <a href="contact.html" class="primary-button">
                         Let's Connect
-                        <span>→</span>
+                        <span aria-hidden="true">→</span>
                     </a>
+                    <!-- point href at your CV file, e.g. files/cv.pdf -->
                     <a href="#" class="cv-button">
                         Download CV
-                        <span>↓</span>
+                        <span aria-hidden="true">↓</span>
                     </a>
                 </div>
-            </section>
-            <section class="hero-image-container">
+            </div>
 
+            <div class="hero-image-container">
                 <div class="image-decoration"></div>
-                <img
-                    src="images/about-me.png"
-                    alt="Photo of Khanya"
-                    class="hero-image">
-            </section>
+                <img src="images/about-me.png" alt="Photo of Khanya" class="hero-image">
+            </div>
         </section>
+
+        <!-- MY JOURNEY -->
         <section class="journey-section">
             <div class="journey-introduction">
-                <span class="section-number">
-                    01
-                </span>
-                <p class="eyebrow light">
-                    MY JOURNEY
-                </p>
+                <span class="section-number">01</span>
+                <p class="eyebrow light">MY JOURNEY</p>
                 <h2>
                     The path that
                     <br>
@@ -96,33 +100,26 @@
                 <div class="small-line"></div>
                 <p>
                     My journey into Computer Science started with CAT in high school,
-                     where I discovered my love for HTML and creating things with code.
-                     That curiosity led me to explore the world of technology and eventually 
-                     choose Computer Science.
+                    where I discovered my love for HTML and creating things with code.
+                    That curiosity led me to explore the world of technology and eventually
+                    choose Computer Science.
                 </p>
                 <p>
                     Now I'm pursuing a degree in Computer Science and
                     continuously learning, building, and challenging
-                    myself to grow every day.Since then, I’ve discovered 
-                    a passion for Java, SQL, backend development and solving 
+                    myself to grow every day. Since then, I've discovered
+                    a passion for Java, SQL, backend development and solving
                     problems through code.
                 </p>
-                <div class="signature">
-                    Khanya M.
-                </div>
+                <div class="signature">Khanya M.</div>
             </div>
+
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        🎓
-                    </div>
+                    <div class="timeline-icon" aria-hidden="true">🎓</div>
                     <div class="timeline-content">
-                        <span class="timeline-year">
-                            2025 — Present
-                        </span>
-                        <h3>
-                            Computer Science Student
-                        </h3>
+                        <span class="timeline-year">2025 — Present</span>
+                        <h3>Computer Science Student</h3>
                         <p>
                             Currently pursuing my Computer Science degree,
                             learning software development, databases,
@@ -130,41 +127,26 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        &lt;/&gt;
-                    </div>
+                    <div class="timeline-icon" aria-hidden="true">&lt;/&gt;</div>
                     <div class="timeline-content">
-                        <span class="timeline-year">
-                            2022 - 2024
-                        </span>
-                        <h3>
-                            Started Building
-                        </h3>
+                        <span class="timeline-year">2022 - 2024</span>
+                        <h3>Started Building</h3>
                         <p>
-                            CAT introduced me to HTML, and I loved turning code into something I 
-                             could see and create.I began building small projects and exploring
+                            CAT introduced me to HTML, and I loved turning code into something I
+                            could see and create. I began building small projects and exploring
                             web development while improving my
                             problem-solving skills.
                         </p>
                     </div>
                 </div>
+
                 <div class="timeline-item">
-
-                    <div class="timeline-icon">
-                        ♡
-                    </div>
-
+                    <div class="timeline-icon" aria-hidden="true">♡</div>
                     <div class="timeline-content">
-
-                        <span class="timeline-year">
-                            2022
-                        </span>
-
-                        <h3>
-                            Discovered My Passion
-                        </h3>
-
+                        <span class="timeline-year">2022</span>
+                        <h3>Discovered My Passion</h3>
                         <p>
                             Fell in love with technology and decided to
                             pursue a career where I can create, innovate
@@ -174,192 +156,112 @@
                 </div>
             </div>
         </section>
+
+        <!-- SKILLS -->
         <section class="skills-section">
             <div class="section-heading">
                 <div>
-                 <span class="section-number">
-                        02
-                    </span>
-                    <p class="eyebrow">
-                        SKILLS & WHAT I DO
-                    </p>
+                    <span class="section-number">02</span>
+                    <p class="eyebrow">SKILLS &amp; WHAT I DO</p>
                     <h2>
                         Technologies I work with
                         <br>
-                        & things I enjoy building
+                        &amp; things I enjoy building
                     </h2>
                 </div>
 
-                <a href="projects.html" class="outline-button">
-                    View My Projects →
-                </a>
+                <a href="projects.html" class="outline-button">View My Projects →</a>
             </div>
+
             <div class="skills-grid">
                 <article class="skill-card">
-                    <div class="skill-icon">
-                        &lt;/&gt;
-                    </div>
-                    <h3>
-                        Web Development
-                    </h3>
-                    <p>
-                        HTML, CSS, JavaScript,
-                        responsive design,
-                        UI/UX basics.
-                    </p>
+                    <div class="skill-icon" aria-hidden="true">&lt;/&gt;</div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, responsive design, UI/UX basics.</p>
                 </article>
-                <article class="skill-card">
-                    <div class="skill-icon">
-                        C#
-                    </div>
-                    <h3>
-                        Programming
-                    </h3>
-                    <p>
-                        C# basics,
-                        problem solving,
-                        data structures.
-                    </p>
-                </article>
-                <article class="skill-card">
-                    <div class="skill-icon">
-                        DB
-                    </div>
-                    <h3>
-                    Database
-                    </h3>
-                    <p>
-                        SQL, T-SQL, database
-                        design, normalization
-                        and Access.
-                    </p>
-                </article>
-                <article class="skill-card">
-                    <div class="skill-icon">
-                     ⚒
-                    </div>
-                    <h3>
-                        Tools
-                    </h3>
-                    <p>
-                        Git & GitHub, VS Code,VS,
-                        Microsoft Office, SQL Server,
-                    </p>
 
-                </article>
                 <article class="skill-card">
-                    <div class="skill-icon">
-                        ✦
-                    </div>
-                    <h3>
-                        Currently Exploring
-                    </h3>
-                    <p>
-                        Node.js,
-                        APIs, cloud and
-                        system design.
-                    </p>
+                    <div class="skill-icon" aria-hidden="true">C#</div>
+                    <h3>Programming</h3>
+                    <p>C# basics, problem solving, data structures.</p>
+                </article>
 
+                <article class="skill-card">
+                    <div class="skill-icon" aria-hidden="true">DB</div>
+                    <h3>Database</h3>
+                    <p>SQL, T-SQL, database design, normalization and Access.</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon" aria-hidden="true">⚒</div>
+                    <h3>Tools</h3>
+                    <p>Git &amp; GitHub, VS Code, Visual Studio, Microsoft Office, SQL Server.</p>
+                </article>
+
+                <article class="skill-card">
+                    <div class="skill-icon" aria-hidden="true">✦</div>
+                    <h3>Currently Exploring</h3>
+                    <p>Node.js, APIs, cloud and system design.</p>
                 </article>
             </div>
         </section>
-        <section class="split-section">
 
+        <!-- GOALS + BEYOND THE CODE -->
+        <section class="split-section">
             <div class="goals-card">
-                <img
-                    src="images/workspace.jpg"
-                    alt="Laptop workspace"
-                    class="goals-image">
+                <img src="images/workspace.jpg" alt="" class="goals-image">
+
                 <div class="goals-overlay">
-                <span class="section-number">
-                        03
-                    </span>
-                    <p class="eyebrow light">
-                        GOALS
-                    </p>
-                    <h2>
-                        Where I'm headed
-                    </h2>
+                    <span class="section-number">03</span>
+                    <p class="eyebrow light">GOALS</p>
+                    <h2>Where I'm headed</h2>
                     <ul>
-                        <li>
-                            <span>✓</span>
-                           Become a skilled backend/software developer
-                        </li>
-                        <li>
-                            <span>✓</span>
-                            Build software that solves real-world problems
-                        </li>
-                        <li>
-                            <span>✓</span>
-                            Grow through collaboration, innovation, and real-world experience
-                        </li>
-                        <li>
-                            <span>✓</span>
-                            Keep learning, building, and improving every day
-                        </li>
-                        <li>
-                            <span>✓</span>
-                            Create a career that gives me financial and location freedom
-                        </li>
+                        <li><span aria-hidden="true">✓</span>Become a skilled backend/software developer</li>
+                        <li><span aria-hidden="true">✓</span>Build software that solves real-world problems</li>
+                        <li><span aria-hidden="true">✓</span>Grow through collaboration, innovation, and real-world experience</li>
+                        <li><span aria-hidden="true">✓</span>Keep learning, building, and improving every day</li>
+                        <li><span aria-hidden="true">✓</span>Create a career that gives me financial and location freedom</li>
                     </ul>
                 </div>
             </div>
 
             <div class="beyond-card">
-                <span class="section-number">
-                    04
-                </span>
-                <p class="eyebrow">
-                    BEYOND THE CODE
-                </p>
-                <h2>
-                    More about me
-                </h2>
+                <span class="section-number">04</span>
+                <p class="eyebrow">BEYOND THE CODE</p>
+                <h2>More about me</h2>
+
                 <div class="interests-grid">
                     <div class="interest">
-                        <div class="interest-icon">
-                            ✈
-                        </div>
-                        <h3>
-                            Travel
-                        </h3>
+                        <div class="interest-icon" aria-hidden="true">✈</div>
+                        <h3>Travel</h3>
                         <p>
-                            I love exploring traveling to explore new places
+                            I love traveling to explore new places
                             and experiencing different
                             cultures. I organise my own and family trips, and enjoy the planning process.
                         </p>
                     </div>
+
                     <div class="interest">
-                        <div class="interest-icon">
-                            ♡
-                        </div>
-                        <h3>
-                            Faith
-                        </h3>
+                        <div class="interest-icon" aria-hidden="true">♡</div>
+                        <h3>Faith</h3>
                         <p>
-                            Strong Christain background.My faith keeps me grounded
+                            Strong Christian background. My faith keeps me grounded
                             and motivated.
                         </p>
                     </div>
-                   <div class="interest">
-                        <div class="interest-icon">
-                            ♧
-                        </div>
-                        <h3>
-                            Fitness
-                        </h3>
+
+                    <div class="interest">
+                        <div class="interest-icon" aria-hidden="true">♧</div>
+                        <h3>Fitness</h3>
                         <p>
                             Fitness is part of my
                             discipline and lifestyle.
                         </p>
                     </div>
+
                     <div class="interest">
-                        <div class="interest-icon">
-                            ✈
-                        </div>
-                        <h3>
-                            Adventure
-                        </h3>
+                        <div class="interest-icon" aria-hidden="true">▲</div>
+                        <h3>Adventure</h3>
                         <p>
                             I enjoy trying new things
                             and stepping outside my
@@ -367,8 +269,9 @@
                         </p>
                     </div>
                 </div>
+
                 <div class="personal-note">
-                    <span>♡</span>
+                    <span aria-hidden="true">♡</span>
                     <p>
                         I believe in growth, consistency
                         and making the most of every
@@ -378,47 +281,29 @@
             </div>
         </section>
 
+        <!-- CONTACT CTA -->
         <section class="contact-cta">
-            <div class="cta-icon">
-                ✉
-            </div>
+            <div class="cta-icon" aria-hidden="true">✉</div>
             <div>
-                <h2>
-                    Let's build something
-                    amazing together
-                </h2>
-                <p>
-                    I'm always open to new opportunities
-                    and collaborations.
-                </p>
+                <h2>Let's build something amazing together</h2>
+                <p>I'm always open to new opportunities and collaborations.</p>
             </div>
             <a href="contact.html" class="primary-button">
                 Get In Touch
-                <span>→</span>
+                <span aria-hidden="true">→</span>
             </a>
         </section>
     </main>
 
-        <footer id="footer"><p>
-         Khanya M. 
-    </p>
-    <div>
-        <a href="index.html">
-            Home
-        </a>
-        <a href="about.html">
-            About
-        </a>
-        <a href="projects.html">
-            Projects
-        </a>
-        <a href="https://github.com/Malikahkm" target="_blank">
-            GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/malikahkm" target="_blank">
-            LinkedIn
-        </a>
-    </div></footer>
-      </div>
+    <footer class="site-footer">
+        <p>Khanya M.</p>
+        <nav aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="https://github.com/Malikahkm" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/khanya-mhlongo-a250503a8" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+    </footer>
 </body>
 </html>
