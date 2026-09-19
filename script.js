@@ -65,8 +65,7 @@ if (menuButton && navLinks) {
     });
 }
 
-
-/* =====================================================
+ /* =====================================================
    DARK MODE
 ===================================================== */
 
@@ -74,26 +73,36 @@ const themeToggle = document.getElementById("themeToggle");
 
 if (themeToggle) {
 
-    themeToggle.addEventListener("click", () => {
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀";
+    } else {
+        document.body.classList.remove("dark");
+        themeToggle.textContent = "☼";
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener("click", function () {
 
         document.body.classList.toggle("dark");
 
         if (document.body.classList.contains("dark")) {
 
             themeToggle.textContent = "☀";
-
             localStorage.setItem("theme", "dark");
 
         } else {
 
             themeToggle.textContent = "☼";
-
             localStorage.setItem("theme", "light");
 
         }
 
     });
-
+}
 
     /* Remember user's theme */
 
