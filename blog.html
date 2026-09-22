@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title> 
+    <title>Blog | Khanya M.</title>
     <script src="theme-init.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=" style2.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -19,10 +21,10 @@
 
         <nav class="nav-links" id="navLinks" aria-label="Main">
             <a href="index.html">Home</a>
-            <a href="about.html" aria-current="page">About</a>
+            <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="skills.html">Skills</a>
-            <a href="blog.html">Blog</a>
+            <a href="blog.html" aria-current="page">Blog</a>
             <a href="contact.html">Contact</a>
         </nav>
 
@@ -43,7 +45,141 @@
         </div>
     </header>
 
-        <footer class="site-footer">
+    <main id="main">
+        <section class="blog-page">
+
+            <div class="blog-intro">
+                <p class="eyebrow">✦ THE BLOG</p>
+                <h1>Notes from the build</h1>
+                <p>
+                    Short write-ups on what I'm learning as I go — backend
+                    development, databases, and the odd lesson from a project
+                    that didn't go to plan the first time.
+                </p>
+            </div>
+
+            <!--
+                Each card below links to its own post page. post-template.html
+                is a ready-made example — duplicate it for every real post,
+                rename the file, and point that card's href at the new file.
+                To add a new row, copy a <a class="blog-card"> block and paste
+                it after the last one; the grid wraps automatically.
+            -->
+            <div class="blog-grid">
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 0s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-backend.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Backend</span>
+                        <h2>Why I fell in love with backend development</h2>
+                        <p>
+                            The part of the stack nobody sees is the part I can't
+                            stop thinking about — here's what pulled me in.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>12 Sep 2026 · 4 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 0.6s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-csharp.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">C#</span>
+                        <h2>Building my first C# project: lessons learned</h2>
+                        <p>
+                            What broke, what I'd do differently, and the one
+                            habit that made debugging so much easier.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>2 Sep 2026 · 6 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 1.2s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-sql.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Databases</span>
+                        <h2>SQL normalization, explained simply</h2>
+                        <p>
+                            The mental model that finally made normal forms
+                            click for me, in plain language.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>20 Aug 2026 · 5 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 0.3s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-journey.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">My Journey</span>
+                        <h2>From CAT in high school to Computer Science</h2>
+                        <p>
+                            How one high school subject turned into a degree,
+                            and the moment I knew I'd chosen right.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>8 Aug 2026 · 3 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 0.9s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-git.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Tools</span>
+                        <h2>Git workflows that actually make sense</h2>
+                        <p>
+                            The branching habits that saved me from more than
+                            one merge-conflict headache.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>25 Jul 2026 · 4 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="blog-card" href="post-template.html" style="--float-delay: 1.5s;">
+                    <div class="blog-card-media">
+                        <img src="images/blog-project.jpg" alt="" loading="lazy">
+                    </div>
+                    <div class="blog-card-body">
+                        <span class="blog-card-tag">Projects</span>
+                        <h2>What a group project taught me about scope</h2>
+                        <p>
+                            We planned for two weeks and shipped in six — here's
+                            what I'd plan differently next time.
+                        </p>
+                        <div class="blog-card-meta">
+                            <span>10 Jul 2026 · 5 min read</span>
+                            <span class="read-more">Read<span aria-hidden="true">→</span></span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <p>Khanya M.</p>
         <nav aria-label="Footer">
             <a href="index.html">Home</a>
