@@ -1231,7 +1231,7 @@ textarea {
     border-radius: 20px;
     background: var(--surface);
     overflow: hidden;
-    animation: card-float 6s ease-in-out infinite;
+    animation: card-float 3s ease-in-out infinite;
     animation-delay: var(--float-delay, 0s);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     will-change: transform;
@@ -1240,7 +1240,7 @@ textarea {
 .blog-card:hover,
 .blog-card:focus-visible {
     animation-play-state: paused;
-    transform: translateY(-10px);
+    transform: translateY(-20px);
     box-shadow: var(--shadow);
     border-color: var(--accent);
 }
