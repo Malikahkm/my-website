@@ -1,25 +1,4 @@
-/* ==========================================================
-   style.css  -  Khanya M. portfolio
-   Pages: index.html, about.html, contact.html, malikah.html
 
-   1. Design tokens (light + dark)
-   2. Base / reset
-   3. Header + mobile menu
-   4. Shared components
-   5. Home
-   6. About
-   7. Contact
-   8. Gallery (malikah.html)
-   9. Footer
-   10. Responsive (all media queries live here, at the bottom)
-   ========================================================== */
-
-
-/* ==========================================================
-   1. DESIGN TOKENS
-   Dark mode = the same variables, redefined. Components never
-   hard-code a colour, so they follow the theme automatically.
-   ========================================================== */
 
 :root {
     --background: #f8f5f1;
@@ -1214,7 +1193,207 @@ textarea {
     filter: invert(1);
 }
 
+.blog-page {
+    width: var(--container);
+    margin: 0 auto;
+    padding: 90px 0 80px;
+}
 
+.blog-intro {
+    max-width: 650px;
+    margin-bottom: 60px;
+}
+
+.blog-intro h1 {
+    margin-bottom: 18px;
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+.blog-intro p {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 26px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: var(--surface);
+    overflow: hidden;
+    animation: card-float 6s ease-in-out infinite;
+    animation-delay: var(--float-delay, 0s);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+}
+
+.blog-card:hover,
+.blog-card:focus-visible {
+    animation-play-state: paused;
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent);
+}
+
+@keyframes card-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.blog-card-media {
+    aspect-ratio: 16 / 10;
+    background: var(--accent-light);
+    overflow: hidden;
+}
+
+.blog-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card-media img {
+    transform: scale(1.04);
+}
+
+.blog-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    padding: 24px 24px 26px;
+}
+
+.blog-card-tag {
+    color: var(--accent-text);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.blog-card-body h2 {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.blog-card-body p {
+    flex: 1;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.blog-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.blog-card-meta .read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-text);
+    font-weight: 600;
+    transition: gap 0.25s ease;
+}
+
+.blog-card:hover .read-more,
+.blog-card:focus-visible .read-more {
+    gap: 10px;
+}
+
+/* individual blog post page (post-template.html) */
+
+.post-page {
+    width: min(760px, 100% - 40px);
+    margin: 0 auto;
+    padding: 80px 0 90px;
+}
+
+.post-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    color: var(--muted);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.post-back:hover {
+    color: var(--accent-text);
+}
+
+.post-page .blog-card-tag {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.post-page h1 {
+    margin-bottom: 18px;
+    font-family: var(--serif);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.post-meta {
+    margin-bottom: 35px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.post-cover {
+    aspect-ratio: 16 / 9;
+    margin-bottom: 40px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--accent-light);
+}
+
+.post-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.post-body h2 {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 500;
+}
 /* ==========================================================
    9. FOOTER
    ========================================================== */
